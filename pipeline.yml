@@ -1,5 +1,5 @@
 resources:
-- name: test-concourse-vault
+- name: concourse-vault-test
   type: git
   source:
     branch: master
@@ -8,9 +8,9 @@ resources:
     password: ((concourse/github/git-srv-password))
 
 jobs:
-- name: concourse-vault-test
+- name: test-concourse-vault
   plan:
-  - get: test-concourse-vault
+  - get: concourse-vault-test
   - task: test
     file: concourse-vault-test/tasks/test-concourse-vault.yml
     params:
