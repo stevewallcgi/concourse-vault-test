@@ -10,4 +10,4 @@ inputs:
   - name: concourse-vault-test
 
 run:
-  path: concourse-vault-test/tasks/test-conconcourse-vault.sh
+  path: concourse-vault-test/tasks/test-concourse-vault.sh
