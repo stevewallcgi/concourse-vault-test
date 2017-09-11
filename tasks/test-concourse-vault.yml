@@ -4,10 +4,10 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: ubuntu
+    repository: cgicloudnative/cfjump
 
 inputs:
   - name: concourse-vault-test
-
+  
 run:
   path: concourse-vault-test/tasks/test-concourse-vault.sh
