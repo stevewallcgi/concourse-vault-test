@@ -4,8 +4,8 @@ resources:
   source:
     branch: master
     uri: https://github.com/stevewallecs/concourse-vault-test
-    username: ((concourse/github/git-srv-user))
-    password: ((concourse/github/git-srv-password))
+    username: ((github/git-srv-user))
+    password: ((github/git-srv-password))
 
 jobs:
 - name: test-concourse-vault
@@ -14,4 +14,4 @@ jobs:
   - task: test
     file: concourse-vault-test/tasks/test-concourse-vault.yml
     params:
-      VAULT_RETRIEVED: ((concourse/main/username))
+      VAULT_RETRIEVED: ((main/username))
