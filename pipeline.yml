@@ -3,14 +3,15 @@ resources:
   type: git
   source:
     branch: master
-    uri: {{scripts-git-uri}}
-    username: {{scripts-git-username}}
-    password: {{scripts-git-password}}
+    uri: https://github.com/stevewallecs/concourse-vault-test
+    username: ((concourse/github/git-srv-user))
+    password: ((concourse/github/git-srv-password))
 
 jobs:
 - name: concourse-vault-test
   plan:
+  - get: test-concourse-vault
   - task: test
-    file: test-concourse-vault.yml
-    param:
+    file: concourse-vault-test/tasks/test-concourse-vault.yml
+    params:
       VAULT_RETRIEVED: ((concourse/main/username))
