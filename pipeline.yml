@@ -1,0 +1,16 @@
+resources:
+- name: test-concourse-vault
+  type: git
+  source:
+    branch: master
+    uri: {{scripts-git-uri}}
+    username: {{scripts-git-username}}
+    password: {{scripts-git-password}}
+
+jobs:
+- name: concourse-vault-test
+  plan:
+  - task: test
+    file: test-concourse-vault.yml
+    param:
+      VAULT_RETRIEVED: ((concourse/main/username))
