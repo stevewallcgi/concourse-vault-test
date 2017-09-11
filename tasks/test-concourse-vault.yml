@@ -8,6 +8,6 @@ image_resource:
 
 inputs:
   - name: concourse-vault-test
-  
+
 run:
   path: concourse-vault-test/tasks/test-concourse-vault.sh
