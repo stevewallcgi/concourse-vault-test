@@ -4,7 +4,7 @@ set -x
 
 echo "started $VAULT_RETRIEVED"
 
-if [ "$VAULT_RETRIEVED" == "admin " ]; then
+if [ "$VAULT_RETRIEVED" == "admin" ]; then
   # Successfully retrieved value from vault
   echo "Success"
   exit 0

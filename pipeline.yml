@@ -14,4 +14,4 @@ jobs:
   - task: test
     file: concourse-vault-test/tasks/test-concourse-vault.yml
     params:
-      VAULT_RETRIEVED: ((main/username))
+      VAULT_RETRIEVED: ((username))
